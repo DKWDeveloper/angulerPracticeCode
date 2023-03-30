@@ -1,0 +1,16 @@
+<p>register works!</p>
+
+<h1>Here other Service Data :- {{otherData}}</h1>
+<button (click)="getData()">otherService</button>
+
+
+<div>
+    <input type="text" name="name" #input>
+    <button (click)="sendData(input.value)">Regidter component</button>
+</div>
+
+<ul *ngFor="let x of arrayList">
+    <li>
+        {{x}}
+    </li>
+</ul>

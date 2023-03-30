@@ -1,0 +1,8 @@
+<h3>activated-route works!</h3>
+
+<ul [ngClass]="">
+    <li *ngFor="let book of data">
+        Id:{{book.id}}, Name: {{book.name}} |
+        <a [routerLink]="['/view-book-detail', book.id]">Show Detail</a>
+    </li>
+</ul>

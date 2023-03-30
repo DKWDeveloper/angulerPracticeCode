@@ -1,0 +1,75 @@
+<p>login works!</p>
+
+
+<!--The content below is only a placeholder and can be replaced.-->
+<style>
+    input.ng-invalid.ng-touched {
+        border-color: red;
+    }
+</style>
+
+<h3 style="text-align: center;">Template driven from</h3>
+<div style="text-align: center;">
+    <form name="form" #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && onSubmit(loginForm.value)">
+        <input type="text" placeholder="first Name" name="first" #first="ngModel" ngModel />
+        <br />
+        <span *ngIf="first.invalid && first.touched" style="color: red">Please Enter a valid input</span>
+        <br />
+        <input type="email" name="email" placeholder="your email" #email="ngModel" ngModel required />
+        <br />
+        <span *ngIf="!email.valid && email.touched" style="color: red">Please Enter a valid input</span>
+        <br />
+        <input type="password" name="password" #password="ngModel" ngModel required />
+        <br />
+        <span *ngIf="password.invalid && password.touched" style="color: red">Please Enter a valid input</span>
+        <br />
+        <button class="btn btn-success">submit</button>
+    </form>
+</div>
+
+
+<br />
+<div style="text-align: center;">
+    <h3>Reactive Form</h3>
+    <form [formGroup]="reactiveForm" (ngSubmit)="submitForm()">
+        <div>
+            <input type="text" placeholder="First Name" formControlName="firstName">
+            <br />
+            <!-- <div
+                *ngIf="reactiveForm.get('name').errors?.required && (reactiveForm.get('name').touched || reactiveForm.get('name').dirty)">
+                Name is required
+            </div> -->
+            <span *ngIf="fnError && fnError.invalid && fnError.touched" style="color: red"> This filed is -->
+                required</span>
+        </div>
+        <br />
+
+        <div>
+            <input type="email" placeholder="Enter Email" formControlName="email">
+            <br />
+            <span *ngIf="emailError && emailError.invalid && emailError.touched" style="color: red"> This filed is -->
+                required</span>
+        </div>
+        <br />
+
+        <div>
+            <input type="password" placeholder="password" formControlName="password">
+            <br />
+            <span *ngIf="passError && passError.invalid && passError.touched" style="color: red"> Please fill the
+                password</span>
+        </div>
+        <br />
+        <div>
+            <button class="btn btn-danger">Submit</button>
+            <button (click)="setValue()">Set Value</button>
+            <button (click)="patchValue()">Patch Value</button>
+
+            <button (click)="disableEmail()">Disable Email</button>
+            <button (click)="enableEmail()">Enable Email</button>
+            <button (click)="resetEmail()">Reset Email</button>
+        </div>
+    </form>
+</div>
+
+<h3>This is data child to parent component</h3>
+<button (click)="childSendData()">send data to parent</button>

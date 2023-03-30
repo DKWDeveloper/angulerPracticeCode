@@ -1,0 +1,78 @@
+<style>
+    .size {
+        width: 50%;
+        height: 500px;
+    }
+
+    .card {
+        width: 45%;
+        /* height: 150px; */
+    }
+</style>
+<div class="container-fluid justify-content-center mt-2  bg-info size w-75" style="height: 100%">
+
+    <div class="text-center">
+        <h3>product page</h3>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus accusamus necessitatibus beatae
+            officiis
+            voluptas quos ab corporis tempore quod odio, omnis suscipit velit explicabo optio nisi adipisci?
+            Perspiciatis,
+            aperiam corrupti.</p>
+    </div>
+
+    <div class="row">
+        <div class="d-flex justify-content-between flex-wrap col-md-8">
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a routerLink="laptop" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.unsplash.com/photo-1554672408-730436b60dde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fG1vYmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=100&q=60"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mobile</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a routerLink="mobile" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    </p>
+                    <a href="" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>

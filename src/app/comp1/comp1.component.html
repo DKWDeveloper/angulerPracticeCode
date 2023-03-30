@@ -1,0 +1,30 @@
+<!-- <div>
+    <p>comp1 works!</p>
+
+    user:<strong>{{name}}</strong>
+
+    <input type="text" placeholder="comp1" #box>
+    <button (click)="Onclick(box.value)">Update</button>
+    <br />
+</div> -->
+
+
+<div>
+    <input type="text" name="name" #value>
+    <button (click)="singalton(value.value)">comonent1</button>
+    <ul *ngFor="let x of listofData; let i = index">
+        <li>
+            {{x}} +index of array {{i}}
+        </li>
+    </ul>
+</div>
+
+<div>
+    <input type="text" [(ngModel)]='data'/>
+   <li> you name: {{data}}</li>
+</div>
+
+<!-- <div>
+    <h1>3 march topic</h1>
+    <h3>{{name}}</h3>
+</div> -->

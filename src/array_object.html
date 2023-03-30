@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<div id="table">
+
+</div>
+<script>
+const person = [
+{
+id: 1,
+name: "Deepak1",
+last: "Kumar1",
+age: "24"
+},
+
+{
+id: 2,
+name: "Deepak2",
+last: "Kumar2",
+age: "25"
+},
+
+{
+id: 3,
+name: "Deepak3",
+last: "Kumar3",
+age: "26"
+},
+
+{
+id: 1,
+name: "Deepak1",
+last: "Kumar1",
+age: "24"
+},
+
+{
+id: 2,
+name: "Deepak2",
+last: "Kumar2",
+age: "25"
+},
+
+{
+id: 3,
+name: "Deepak3",
+last: "Kumar3",
+age: "26"
+},
+{
+id: 3,
+name: "Deepak3",
+last: "Kumar3",
+age: "26"
+},
+{
+id: 3,
+name: "Deepak3",
+last: "Kumar3",
+age: "26"
+}
+]
+
+person.filter((data, i) =>{
+//console.log("filter",i !== data.id)
+})
+
+
+var html = "<table border= '1'>";
+html += "<tr>";
+
+html += "<th>" + "id"  + "</th>";
+
+
+html += "<th>" + "name"  + "</th>";
+html += "<th>" + "Last"  + "</th>";
+html += "<th>" + "age"  + "</th>";
+html += "</tr>";
+
+function remove(index){
+console.log("map index using this",index)
+//person.filter(())
+}
+person.map(function(d, i){
+console.log(i)
+ html +="<tr>";
+ html +="<td>" + d.id + "</td>"
+ html +="<td>" + d.name + "</td>"
+ html +="<td>" + d.last + "</td>"
+ html +="<td>" + d.age + "</td>"
+ html +="<td onClick=`${remove(i)}`>" +"<button>" + "Remove" + "</button>" +"</td>"
+ html +="</tr>"
+})
+html += "</table>"
+document.getElementById("table").innerHTML = html;
+</script>
+</body>
+</html>
+
+
